@@ -1,0 +1,15 @@
+# Risk scoring weights (demo)
+sensitivity:
+  low: 20
+  medium: 55
+  high: 85
+  unknown: 45
+storage_bonus:
+  localfs: 0
+  minio: 10
+  s3: 15
+  gcs: 15
+  azure: 15
+blast_radius_bonus:
+  kubeflow_namespace: 10
+  default_service_account: 10
