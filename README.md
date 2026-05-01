@@ -90,3 +90,77 @@ Artifacts are generated per pipeline run:
 - `receipts.json`
 
 Outputs are written to:
+out/evidence/<pipeline_run_id>/
+
+
+These support:
+- audit traceability  
+- reproducibility  
+- compliance documentation  
+
+---
+
+## Pipeline Execution
+
+The Kubeflow pipeline defines stages for:
+
+- ingestion  
+- classification  
+- transformation  
+- audit  
+- policy enforcement  
+- evidence generation  
+- deletion  
+
+Each stage produces intermediate artifacts tracked across the pipeline lifecycle.
+
+---
+
+## Example Run
+
+- records processed: 100  
+- high severity findings: 12  
+- policy gate: FAIL  
+- pipeline executed: yes  
+- destroy phase: completed  
+- count_before: 100  
+- count_after: 0  
+- proof_of_absence: true  
+
+---
+
+## Scope and Limitations
+
+This repository:
+
+- does not evaluate model accuracy or training performance  
+- does not validate semantic retrieval persistence  
+- does not guarantee deletion across distributed storage layers  
+
+Focus is limited to:
+- pipeline-level governance  
+- lifecycle control enforcement  
+- structured evidence generation  
+
+---
+
+## Why This Matters
+
+ML pipelines are a critical execution layer where:
+
+- sensitive data propagates across stages  
+- intermediate artifacts persist  
+- governance controls are often inconsistent  
+
+This project demonstrates how DSPM principles can be applied to **pipeline execution environments**, enabling:
+
+- data visibility  
+- policy enforcement  
+- controlled deletion  
+- audit-ready evidence  
+
+---
+
+## One-Line Summary
+
+> DSPM governance framework for Kubeflow pipelines with lifecycle controls, policy enforcement, and verifiable artifact deletion.
